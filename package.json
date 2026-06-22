@@ -1,0 +1,13 @@
+{
+  "name": "roadmap-quest",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sistema gamificado de estudo das 3 trilhas (Técnica de IA/LLM/RAG, SaaS Startupeiro, Distribuição). Zero dependências — usa node:sqlite nativo.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  }
+}

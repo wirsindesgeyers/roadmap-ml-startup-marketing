@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roadmap Quest — Expedição Fundador de IA</title>
+  <meta name="description" content="Sistema gamificado de estudo das três trilhas: Técnica de IA, SaaS Startupeiro e Distribuição." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🧭%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <!-- Atmosfera de fundo -->
+  <div class="bg-layer" aria-hidden="true">
+    <div class="bg-grid"></div>
+    <div class="bg-glow bg-glow--1"></div>
+    <div class="bg-glow bg-glow--2"></div>
+    <div class="bg-glow bg-glow--3"></div>
+  </div>
+
+  <div id="app" class="app">
+    <!-- Barra lateral de navegação -->
+    <nav class="rail" id="rail">
+      <div class="rail__brand" data-view="dashboard" role="button" tabindex="0" title="Roadmap Quest">
+        <span class="rail__logo">🧭</span>
+        <span class="rail__brandtext">Roadmap<br /><b>Quest</b></span>
+      </div>
+      <div class="rail__nav" id="railNav"><!-- preenchido via JS --></div>
+      <div class="rail__foot">
+        <button class="rail__btn" id="btnFocus" title="Modo Foco (Pomodoro)"><span>⏱️</span><em>Foco</em></button>
+        <button class="rail__btn" id="btnReset" title="Reiniciar progresso"><span>↺</span><em>Reset</em></button>
+      </div>
+    </nav>
+
+    <!-- Topo (HUD) -->
+    <header class="hud" id="hud"><!-- preenchido via JS --></header>
+
+    <!-- Conteúdo -->
+    <main class="stage" id="stage" tabindex="-1"><!-- preenchido via JS --></main>
+  </div>
+
+  <!-- Camada de efeitos / toasts -->
+  <div class="fx" id="fx" aria-live="polite"></div>
+
+  <!-- Modal genérico -->
+  <div class="modal-root" id="modalRoot" hidden></div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
