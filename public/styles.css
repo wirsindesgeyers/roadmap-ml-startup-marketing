@@ -199,7 +199,8 @@ a { color: var(--accent-2); }
 @media (max-width: 900px){ .dash__hero { grid-template-columns: 1fr; } }
 
 .hero-level { position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; text-align: center; padding: 26px; }
-.hero-level::after { content:""; position:absolute; inset:0; background: radial-gradient(circle at 50% 30%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 70%); pointer-events:none; }
+.hero-level > * { position: relative; z-index: 1; }
+.hero-level::after { content:""; position:absolute; inset:0; z-index:0; background: radial-gradient(circle at 50% 30%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 70%); pointer-events:none; }
 .hero-ring { --rs: 168px; position: relative; }
 .hero-ring .ring__num { font-size: 46px; }
 .hero-ring .ring__num small { display:block; font-family: var(--font-mono); font-size: 11px; color: var(--muted); letter-spacing:.12em; margin-top: 2px; font-weight: 500; }
@@ -282,7 +283,6 @@ a { color: var(--accent-2); }
 .phase__card { background: linear-gradient(180deg, var(--surface), var(--abyss-2)); border: 1px solid var(--line); border-radius: var(--r-lg); overflow: hidden; transition: border-color .2s; }
 .phase__card:hover { border-color: var(--line-2); }
 .phase.is-done .phase__card { border-color: color-mix(in srgb, var(--accent) 30%, var(--line)); }
-.phase__bar { position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: linear-gradient(var(--accent), var(--accent-2)); opacity: 0; transition: opacity .2s; }
 
 .phase__head { display: flex; align-items: center; gap: 14px; padding: 16px 20px; cursor: pointer; user-select: none; }
 .phase__code { font-family: var(--font-mono); font-size: 11px; color: var(--accent-2); letter-spacing: .05em; }
